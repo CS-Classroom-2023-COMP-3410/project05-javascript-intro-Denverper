@@ -2,6 +2,9 @@ const cardGrid = document.getElementById('card-grid');
 const movesDisplay = document.getElementById('moves');
 const timerDisplay = document.getElementById('timer');
 const restartButton = document.getElementById('restart-button');
+const modal = document.getElementById("myModal");
+const modalContent = document.getElementById("modal-content");
+const span = document.getElementsByClassName("close")[0];
 
 let moves = 0;
 let timer;
@@ -10,9 +13,11 @@ let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
 let matchedPairs = 0;
+let modalDisplay = false;
 
 // Card symbols (adjust as needed)
 const symbols = ['🍎', '🍌', '🍓', '🍇', '🍑', '🍒', '🍍', '🥝'];
+
 let cards = [];
 
 // Initialize the game
@@ -27,6 +32,8 @@ function initGame() {
 
     clearInterval(timer);
     timer = setInterval(updateTimer, 1000);
+
+    cardGrid.style.gridTemplateColumns = `repeat(${Math.floor(symbols.length/2)}, 1fr)`;
 
     cards.forEach(symbol => {
         const card = document.createElement('div');
@@ -73,7 +80,11 @@ function checkMatch() {
 
         if (matchedPairs === symbols.length) {
             clearInterval(timer);
-            alert(`You won in ${moves} moves and ${timeElapsed} seconds!`);
+            modal.style.display = "block";
+            const p = document.createElement('p');
+            p.textContent = `You won in ${moves} moves and ${timeElapsed} seconds!`;
+            modalContent.appendChild(p);
+            modalDisplay = true;
         }
 
         resetTurn();
@@ -85,6 +96,24 @@ function checkMatch() {
             secondCard.textContent = '';
             resetTurn();
         }, 1000);
+    }
+}
+
+function modalClose() {
+    modal.style.display = "none";
+    modalContent.removeChild(modalContent.lastChild);
+    modalDisplay = false;
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modalClose();
+}
+  
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (modalDisplay && event.target == modal) {
+        modalClose();
     }
 }
 
