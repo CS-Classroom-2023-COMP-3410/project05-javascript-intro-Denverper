@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1e1e2c;
+    color: white;
+    text-align: center;
+  }
+  
+  header {
+    padding: 1rem;
+    background-color: #4CAF50;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .search-bar {
+    margin: 1rem 0;
+  }
+  
+  .search-bar input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .element {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .element:hover {
+    transform: scale(1.1);
+  }
+  
+  .element.highlight {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    position: relative;
+  }
+  
+  .group-noble-gases {
+    background-color: #ffcc00;
+  }
+  
+  .group-alkali-metals {
+    background-color: #ff6666;
+  }
+  
+  .group-alkaline-earth-metals {
+    background-color: #ff9966;
+  }
+  
+  .group-halogens {
+    background-color: #66ccff;
+  }
+  
+  .group-transition-metals {
+    background-color: #cc99ff;
+  }
+  
+  .group-metalloids {
+    background-color: #99ff99;
+  }
+  
+  .group-nonmetals {
+    background-color: #6699ff;
+  }
+  
+  .group-post-transition-metals {
+    background-color: #ffcc99;
+  }
+  
+  .group-lanthanides {
+    background-color: #ccccff;
+  }
+  
+  .group-actinides {
+    background-color: #ff99cc;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .element-details {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
