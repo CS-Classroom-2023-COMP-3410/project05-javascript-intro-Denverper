@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  padding: 2rem;
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  perspective: 1000px;
+}
+
+.digital-clock {
+  font-size: 80px;
+  color: #00b4ff;
+  text-shadow: 0 2px 5px rgba(0, 180, 255, 0.7), 0 0 30px rgba(0, 180, 255, 0.5);
+  background: linear-gradient(180deg, #111, #333);
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.7);
+  transform: rotateX(-10deg);
+}
+
+.settings {
+  margin: 2rem auto;
+  display: inline-block;
+  text-align: left;
+  background: #222;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.settings label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.settings select,
+.settings input,
+button {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: #00b4ff;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 180, 255, 0.5);
+}
+
+.alarms {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#alarm-list {
+  list-style: none;
+  padding: 0;
+}
+
+#alarm-list li {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00b4ff;
+}
+
+#alarm-list li button {
+  padding: 0.3rem 0.5rem;
+  border: none;
+  background-color: #ff5722;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}

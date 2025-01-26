@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    background: #f0f4f8;
+    color: #333;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .quiz-container, .summary-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .quiz-container.hidden,
+  .summary-container.hidden {
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+  
+  #question {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .choices {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .choices li {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+  }
+  
+  .choices li:hover {
+    background-color: #e7f3ff;
+    border-color: #2196F3;
+  }
+  
+  .choices li.correct {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+  }
+  
+  .choices li.incorrect {
+    background-color: #FF5722;
+    color: white;
+    border-color: #FF5722;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .summary-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .summary-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #review-answers {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #review-answers li {
+    margin: 1rem 0;
+    text-align: left;
+    font-size: 1rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
